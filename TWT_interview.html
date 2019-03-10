@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title> 计算机网络 张亚平 </title>
+<style type="text/css">
+h {color: rgb(81,74,74); font-famliy: Mircosoft Yahei; font-size: 24px}
+p {font-famliy: SimSun; font-size: 16px; text-indent: 2em}
+</style>
+</head>
+
+<body>
+
+<div background_color="#a0a0a0" id="menu" style="height:200px; width:200px; float:left;">
+<h1 style="text-align: center; font-size: 26px">作者</h1>
+    <div align="center">
+        <img src="https://b-ssl.duitang.com/uploads/item/201612/19/20161219123642_3RuBc.jpeg" width="150px" height="150px"/>
+    </div>
+<ul>
+    <li>姓名：刘兴宇</li>
+    <li>学号：3017218063</li>
+    <li>年级：2017</li>
+    <li>学院：智能与计算学部</li>
+    <li>班级：软件工程1班</li>
+</ul>
+</div>
+
+<div id="main" style="height:200px; width:1000px; float:left;">
+<h1 style="text-align: center; font-size: 26px"> 第二章 应用层 </h1>
+<h2> 一、应用层协议管理</h2>
+    <ol>
+    <li> 网络应用程序 </li>
+        <p>
+        网络应用程序需要在不同的端系统上都能运行，且能通过网络彼此进行通信，但不需要在网络核心上运行，因为网络核心并不在应用层上起作用（只拥有物理层、数据链接层和网络层）。
+        </p>
+    <li>网络应用程序的体系结构 </li>
+        <dl>
+        <dd>(1) 客户-服务器体系结构</dd>
+            <P>
+            服务器server：一台打开的主机，拥有永久的IP地址，回应客户的响应，是储存数据的数据中心（data center）。<br>
+            客户端client：彼此之间不能直接相互通信，拥有动态的IP地址，并且随时可能关闭。
+            </p>
+            
+        <dd>(2) P2P体系结构</dd>
+            <P>
+            <ul>
+            <li> 没有永久打开的主机，应用程序在不同的主机之间直接通信，它们被称为对等方 </li>
+            <li> 对等方的任何一方随时都有可能关闭，导致数据传输中断。而再次打开时将改变其IP地址 </li>
+            <li> 拥有自拓展性（self-scalability）：网络中对等方数量的增加既增加了工作负载，又为网络增加了服务能力 </li>
+            <li> 数据传输可以同时在多个对等方之间传输，因此对带宽和服务器设施的要求较低 </li>
+            </ul>
+            </P>
+        </dl>
+    </ol>
+    <div align="center">
+        <img src="https://img-blog.csdn.net/20170909192617023" alt="网络应用程序的体系结构" align="center" width=300px height="300"/>
+    </div>
+    <p style="text-align:center; font-size: 12px">网络应用程序的体系结构</p>
+
+<h2>二、网络应用程序所需服务（来自运输层）</h2>
+    <table border="1" align="center" width="800px">
+        <tr>
+            <th width="25%">应用</th>
+            <th width="25%">数据丢失</th>
+            <th width="25%">带宽</th>
+            <th width="25%">时间敏感</th>
+        </tr>
+
+        <tr>
+            <td width="25%">文件传输</td>
+            <td width="25%">不能丢失</td>
+            <td width="25%">弹性</td>
+            <td width="25%">不</td>
+        </tr>
+
+        <tr>
+            <td width="25%">电子邮件</td>
+            <td width="25%">不能丢失</td>
+            <td width="25%">弹性</td>
+            <td width="25%">不</td>
+        </tr>
+
+        <tr>
+            <td width="25%">Web文档</td>
+            <td width="25%">不能丢失</td>
+            <td width="25%">弹性（几kbps）</td>
+            <td width="25%">不</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" width="25%">因特网电话、视频会议</td>
+            <td rowspan="2" width="25%">容忍丢失</td>
+            <td width="25%">音频（几kbps~1Mbps）</td>
+            <td rowspan="2" width="25%">是，100ms</td>
+        </tr>
+
+        <tr>
+            <td width="25%">视频（10kbps~5Mbps）</td>
+        </tr>
+
+        <tr>
+            <td width="25%">交互式游戏</td>
+            <td width="25%">容忍丢失</td>
+            <td width="25%">几kbps~10kbps</td>
+            <td width="25%">是，100ms</td>
+        </tr>
+    </table>
+    <P style="font-size: 12px; text-align:center">选择的网络应用的要求
+    </P>
+</div>
+</body>
+
+</html>
